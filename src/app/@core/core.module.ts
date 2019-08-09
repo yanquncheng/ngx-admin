@@ -117,6 +117,17 @@ export const NB_CORE_PROVIDERS = [
             failure: null,
           },
          },
+         logout : {
+          alwaysFail: false,
+          endpoint: '/login',
+          method: 'post',
+          redirect: {
+            success: '/',
+            failure: '/auth/login',
+          },
+          defaultErrors: ['Something went wrong, please try again.'],
+          defaultMessages: ['You have been successfully logged out.']
+        },
          register: {
            // ...
            endpoint: '/api/auth/register',

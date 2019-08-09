@@ -12,6 +12,8 @@ import { ThemeModule } from './@theme/theme.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthGuard } from './auth-guard.service';
+import { LogoutComponent } from './pages/logout/logout.component';
+
 import {
   NbChatModule,
   NbDatepickerModule,
@@ -19,16 +21,16 @@ import {
   NbMenuModule,
   NbSidebarModule,
   NbToastrModule,
-  NbWindowModule,
+  NbWindowModule, 
 } from '@nebular/theme';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, LogoutComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    AppRoutingModule,
+    AppRoutingModule, 
 
     ThemeModule.forRoot(),
 
