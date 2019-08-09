@@ -120,7 +120,7 @@ export const NB_CORE_PROVIDERS = [
          register: {
            // ...
            endpoint: '/api/auth/register',
-         }, 
+         }
       }),
       
       NbDummyAuthStrategy.setup({
