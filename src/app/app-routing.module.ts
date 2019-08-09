@@ -8,10 +8,12 @@ import {
   NbRequestPasswordComponent,
   NbResetPasswordComponent,
 } from '@nebular/auth';
+import { AuthGuard } from './auth-guard.service';
 
 const routes: Routes = [
   {
     path: 'pages',
+    canActivate: [AuthGuard], // here we tell Angular to check the access with our AuthGuard
     loadChildren: () => import('app/pages/pages.module')
       .then(m => m.PagesModule),
   },
